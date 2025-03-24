@@ -1,0 +1,24 @@
+{
+  "name": "acquasuisse-catalog",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js"
+  },
+  "dependencies": {
+    "@react-router/node": "^7.4.0",
+    "@react-router/serve": "^7.4.0",
+    "isbot": "^5.1.17",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.4.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^5.4.11"
+  }
+}
