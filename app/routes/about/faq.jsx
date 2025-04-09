@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "../components/faq_cards";
-import faq_data from "../data/faq_data";
+import Card from "../../components/faq_cards";
+import faq_data from "../../data/faq_data";
 
 function faq() {
   const item = faq_data;

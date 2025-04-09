@@ -1,8 +1,8 @@
 import React from "react";
-import AboutBanner from "../assets/products/AboutBanner.jpg";
-import CustomerImage from "../assets/products/CustomerImage.jpg";
-import PerfumeShoot_1 from "../assets/products/PerfumeShoot_1.jpg";
-import PerfumeShoot_2 from "../assets/products/PerfumeShoot_2.jpg";
+import AboutBanner from "../../assets/products/AboutBanner.jpg";
+import CustomerImage from "../../assets/products/CustomerImage.jpg";
+import PerfumeShoot_1 from "../../assets/products/PerfumeShoot_1.jpg";
+import PerfumeShoot_2 from "../../assets/products/PerfumeShoot_2.jpg";
 
 function about() {
   return (
