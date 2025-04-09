@@ -1,12 +1,15 @@
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Acquasuisse" },
+    { name: "description", content: "Acquasuisse" },
   ];
 }
 
 export default function Home() {
   return (
-    <h1>Home</h1>
+    // styling here is only for testing purposes, please replace with full design
+    <section className="bg-gray-500 h-[900px]">
+      <h1>Home</h1>
+    </section>
   )
 }
