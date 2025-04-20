@@ -44,7 +44,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Navigation */}
+      {/* Navigation */}  {/* TODO: Optimize Navigation Section of Homepage */} 
       <nav className="bg-gray-300  text-white">
         <div className="max-w-7xl mx-auto flex items-center">
           <a className="hover:underline pt-164 pb-20 px-40" href="#">
