@@ -9,7 +9,7 @@ function ProductCard({ product }) {
   return (
     <div>
       {/*should be img tag when we have photos for products, placeholder for now */}
-      <div className="bg-gray-300 w-full aspect-square"></div>
+      <div className="w-full aspect-square bg-gray-300 transition-colors duration-300 ease-in-out hover:bg-gray-400"></div>
 
       <p className="text-sm font-body font-semibold mt-2">{product.name}</p>
       <p className="text-xs font-body mt-1">{product.price}</p>
@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gray-200 flex flex-col items-center justify-center h-48 sm:h-56 md:pt-128 md:pb-56">
+      <section className="bg-gray-200 flex flex-col items-center justify-center pt-29 pb-12  md:pt-69 md:pb-28 lg:pt-128 lg:pb-56">
         <h1 className="text-black text-lg font-heading font-bold mb-1 sm:text-xl md:text-5xl">
           Luxury Inspired Perfume
         </h1>
@@ -44,25 +44,34 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Navigation */}  {/* TODO: Optimize Navigation Section of Homepage */} 
-      <nav className="bg-gray-300  text-white">
-        <div className="max-w-7xl mx-auto flex items-center">
-          <a className="hover:underline pt-164 pb-20 px-40" href="#">
+      {/* Catalogue */}
+      <nav className="bg-gray-300 grid grid-cols-3 text-white text-xs sm:text-sm md:text-base font-light tracking-widest uppercase">
+        <a
+          href="#"
+          className="flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline" //relative
+        >
+          {/* image sample below */}
+          {/* <span className="absolute inset-0 bg-[url('https://placehold.co/600x400?bg=cccccc&fg=555555')] bg-cover bg-center filter"></span> */}
+          <span
+            className="pb-4" //relative
+          >
             FOR UNISEX
-          </a>
-          <a
-            className="hover:underline  pt-164 pb-20 px-40"
-            href="#"
-          >
-            WOMEN'S
-          </a>
-          <a
-            className="hover:underline  pt-164 pb-20 px-40"
-            href="#"
-          >
-            MEN'S
-          </a>
-        </div>
+          </span>
+        </a>
+        <a
+          href="#"
+          className=" flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline"
+        >
+          {/* insert image */}
+          <span className="pb-4">WOMEN'S</span>
+        </a>
+        <a
+          href="#"
+          className="flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline"
+        >
+          {/* insert image */}
+          <span className="pb-4">MEN'S</span>
+        </a>
       </nav>
 
       {/* New In Section */}
