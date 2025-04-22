@@ -11,12 +11,12 @@ export function meta() {
     return (
       <>
       {/* Product Main Info includes Photos and Description */}
-      <section className="h-screen bg-white flex mb-10">
+      <section className="bg-white flex mb-10">
 
         {/* This is where photos go */}
         <div className="block w-5/12 pt-24 pr-16 pb-28 pl-44">
           {/* Main PHOTO */}
-          <div className="bg-gray-500 w-full h-3/4 mb-10"></div>
+          <div className="bg-gray-500 w-full h-7/8 mb-10"></div>
           {/* OTHER PHOTOs */}
           <div className="flex">
             <div className="bg-gray-100 aspect-square w-1/4 mr-1"></div>
@@ -38,7 +38,7 @@ export function meta() {
             SWEET, POWDERY, MUSKY WOODY, FRESH, CITRUS</p>
           
           <p className="text-gray-500 text-xl mb-5">Inspired by:</p>
-          <p className="flex-wrap mb-10">Britney Spears Curious</p>
+          <p className="flex-wrap mb-20">Britney Spears Curious</p>
 
         {/* Sizes and Prices */}
         <div className="flex flex-wrap gap-2.5">
