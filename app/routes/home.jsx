@@ -44,7 +44,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Catalogue */}
+      {/* Catalogue Section */}
       <nav className="bg-gray-300 grid grid-cols-3 text-white text-xs sm:text-sm md:text-base font-light tracking-widest uppercase">
         <a
           href="#"
