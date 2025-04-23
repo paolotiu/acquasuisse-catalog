@@ -1,8 +1,5 @@
 export function meta() {
-  return [
-    { title: "Acquasuisse" },
-    { name: "description", content: "Acquasuisse" },
-  ];
+  return [{ title: 'Acquasuisse' }, { name: 'description', content: 'Acquasuisse' }];
 }
 
 function ProductCard({ product }) {
@@ -19,17 +16,17 @@ function ProductCard({ product }) {
 
 export default function Home() {
   const newInProducts = [
-    { id: 1, name: "Product name", price: "PHP 0.00" }, // should include img, alt properties, for now none because were using divs for placeholder
-    { id: 2, name: "Product name", price: "PHP 0.00" },
-    { id: 3, name: "Product name", price: "PHP 0.00" },
-    { id: 4, name: "Product name", price: "PHP 0.00" },
+    { id: 1, name: 'Product name', price: 'PHP 0.00' }, // should include img, alt properties, for now none because were using divs for placeholder
+    { id: 2, name: 'Product name', price: 'PHP 0.00' },
+    { id: 3, name: 'Product name', price: 'PHP 0.00' },
+    { id: 4, name: 'Product name', price: 'PHP 0.00' },
   ];
 
   const bestSellers = [
-    { id: 1, name: "Product name", price: "PHP 0.00" },
-    { id: 2, name: "Product name", price: "PHP 0.00" },
-    { id: 3, name: "Product name", price: "PHP 0.00" },
-    { id: 4, name: "Product name", price: "PHP 0.00" },
+    { id: 1, name: 'Product name', price: 'PHP 0.00' },
+    { id: 2, name: 'Product name', price: 'PHP 0.00' },
+    { id: 3, name: 'Product name', price: 'PHP 0.00' },
+    { id: 4, name: 'Product name', price: 'PHP 0.00' },
   ];
 
   return (
@@ -65,10 +62,7 @@ export default function Home() {
           {/* insert image */}
           <span className="pb-4">WOMEN'S</span>
         </a>
-        <a
-          href="#"
-          className="flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline"
-        >
+        <a href="#" className="flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline">
           {/* insert image */}
           <span className="pb-4">MEN'S</span>
         </a>
