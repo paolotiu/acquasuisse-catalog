@@ -19,7 +19,7 @@ export default function about() {
           className="text-center justify-center w-full bg-no-repeat bg-cover bg-center"
           style={{ backgroundImage: `url(${AboutBanner})` }}
         >
-          <h1 className="font-[Julius_Sans_One] text-black text-6xl uppercase bg-white/40 w-full h-full p-32">
+          <h1 className="font-[Julius_Sans_One] text-black text-4xl md:text-5xl uppercase bg-white/40 w-full h-full p-12 py-24 md:p-24">
             The <span className="font-[Jost] text-primary">First</span> <br />{" "}
             of its kind
           </h1>
@@ -41,7 +41,7 @@ export default function about() {
             at a fraction of the cost of top designer perfume brands.
           </p>
         </div>
-        <div className="grid grid-cols-3 md:gap-4 lg:gap-12 justify-center items-center pb-24 px-12 max-w-[1000px] m-auto">
+        <div className="grid md:grid-cols-3 gap-4 justify-center items-center pb-24 px-12 max-w-[1000px] m-auto">
           <img src={PerfumeShoot_2} className="object-cover h-76 w-84" />
           <img src={CustomerImage} className="object-cover h-76 w-84" />
           <img src={PerfumeShoot_1} className="object-cover h-76 w-84" />
