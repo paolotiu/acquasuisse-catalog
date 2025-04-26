@@ -172,20 +172,6 @@ export default function Home() {
     };
   }, []);
 
-  const [width, setWidth] = useState(0);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
-  const isMobile = width <= 640;
-
   return (
     <>
       {/* Hero Section */}
@@ -197,57 +183,21 @@ export default function Home() {
           LONG-LASTING. LUXURY EAU DE PARFUM.
         </p>
       </section>
-
       {/* Catalogue Section */}
-      {isMobile ? (
-        <div className="my-32">
-          <h2 className="text-red-700 text-center font-heading text-4xl mb-6">
-            Categories
-          </h2>
-          <nav
-            ref={carouselRef}
-            tabIndex={0}
-            className="flex space-x-4 overflow-x-auto text-white no-scrollbar scrollbar-hidden cursor-grab active:cursor-grabbing"
-          >
-            <a
-              href="#"
-              role="listitem"
-              draggable={false}
-              className="flex-shrink-0 w-58 h-82  bg-center bg-cover flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline bg-gray-300 " //relative
-            >
-              {/* image sample below */}
-              {/* <span className="absolute inset-0 bg-[url('https://placehold.co/600x400?bg=cccccc&fg=555555')] bg-cover bg-center filter"></span> */}
-              <span
-                className="pb-4" //relative
-              >
-                FOR UNISEX
-              </span>
-            </a>
-            <a
-              href="#"
-              role="listitem"
-              draggable={false}
-              className="flex-shrink-0 w-58 h-82 bg-center bg-cover flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline bg-gray-300 "
-            >
-              {/* insert image */}
-              <span className="pb-4">WOMEN'S</span>
-            </a>
-            <a
-              href="#"
-              role="listitem"
-              draggable={false}
-              className="flex-shrink-0 w-58 h-82 bg-center bg-cover flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline bg-gray-300 "
-            >
-              {/* insert image */}
-              <span className="pb-4">MEN'S</span>
-            </a>
-          </nav>
-        </div>
-      ) : (
-        <nav className="bg-gray-300 grid grid-cols-3 text-white text-xs sm:text-sm md:text-base font-light tracking-widest uppercase">
+      <div className="my-32 sm:hidden">
+        <h2 className="text-primary text-center font-heading text-4xl mb-6">
+          Categories
+        </h2>
+        <nav
+          ref={carouselRef}
+          tabIndex={0}
+          className="flex space-x-4 overflow-x-auto text-white no-scrollbar scrollbar-hidden cursor-grab active:cursor-grabbing"
+        >
           <a
             href="#"
-            className="flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline" //relative
+            role="listitem"
+            draggable={false}
+            className="flex-shrink-0 w-58 h-82  bg-center bg-cover flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline bg-gray-300 " //relative
           >
             {/* image sample below */}
             {/* <span className="absolute inset-0 bg-[url('https://placehold.co/600x400?bg=cccccc&fg=555555')] bg-cover bg-center filter"></span> */}
@@ -259,89 +209,114 @@ export default function Home() {
           </a>
           <a
             href="#"
-            className=" flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline"
+            role="listitem"
+            draggable={false}
+            className="flex-shrink-0 w-58 h-82 bg-center bg-cover flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline bg-gray-300 "
           >
             {/* insert image */}
             <span className="pb-4">WOMEN'S</span>
           </a>
           <a
             href="#"
-            className="flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline"
+            role="listitem"
+            draggable={false}
+            className="flex-shrink-0 w-58 h-82 bg-center bg-cover flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline bg-gray-300 "
           >
             {/* insert image */}
             <span className="pb-4">MEN'S</span>
           </a>
         </nav>
-      )}
+      </div>
+
+      <nav className="bg-gray-300  text-white text-xs sm:text-sm md:text-base font-light tracking-widest uppercase hidden sm:grid sm:grid grid-cols-3">
+        <a
+          href="#"
+          className="flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline" //relative
+        >
+          {/* image sample below */}
+          {/* <span className="absolute inset-0 bg-[url('https://placehold.co/600x400?bg=cccccc&fg=555555')] bg-cover bg-center filter"></span> */}
+          <span
+            className="pb-4" //relative
+          >
+            FOR UNISEX
+          </span>
+        </a>
+        <a
+          href="#"
+          className=" flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline"
+        >
+          {/* insert image */}
+          <span className="pb-4">WOMEN'S</span>
+        </a>
+        <a
+          href="#"
+          className="flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline"
+        >
+          {/* insert image */}
+          <span className="pb-4">MEN'S</span>
+        </a>
+      </nav>
 
       {/* New In Section */}
       <section className="max-w-7xl mx-auto my-32 px-8">
         <div className="sm:flex sm:items-center sm:justify-between mb-6">
-          <h2 className="text-red-700 text-center font-heading text-4xl">
+          <h2 className="text-primary text-center font-heading text-4xl">
             New In
           </h2>
-          {!isMobile && (
-            <a
-              className="text-red-700 text-xs sm:text-sm font-light uppercase tracking-wide hover:underline"
-              href="#"
-            >
-              VIEW ALL
-            </a>
-          )}
+
+          <a
+            className="text-primary text-xs sm:text-sm font-light uppercase tracking-wide hover:underline hidden sm:flex"
+            href="#"
+          >
+            VIEW ALL
+          </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {newInProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-        {isMobile && (
-          <div class="flex justify-center m-8">
-            <button class="bg-primary text-white px-5 py-3 font-body">
-              View All
-            </button>
-          </div>
-        )}
-      </section>
 
+        <div class="flex justify-center m-8">
+          <button class="bg-primary text-white px-5 py-3 font-body sm:hidden">
+            View All
+          </button>
+        </div>
+      </section>
       {/* Misc Section */}
       <section className="max-w-7xl mx-auto my-32 sm:px-6 lg:px-8 mt-32 flex flex-col sm:flex-row sm:items-center sm:space-x-8">
         <div className="w-full sm:w-1/2">
           <div className="bg-gray-300 w-full aspect-square"></div>
         </div>
         <div className="w-full sm:w-1/2 mt-6 sm:mt-0 text-center ">
-          <h3 className="text-red-700 text-4xl font-heading mb-1">Misc</h3>
+          <h3 className="text-primary text-4xl font-heading mb-1">Misc</h3>
           <p className="text-sm font-body mt-2">Product description</p>
           <p className="text-xs font-body mt-1">PHP 0.00</p>
         </div>
       </section>
-
       {/* Best Sellers Section */}
       <section className="max-w-7xl mx-auto px-8 my-32">
         <div className="sm:flex sm:items-center sm:justify-between mb-6">
-          <h2 className="text-red-700 text-center font-heading text-4xl">
+          <h2 className="text-primary text-center font-heading text-4xl">
             Best Sellers
           </h2>
-          {!isMobile && (
-            <a
-              className="text-red-700 text-xs sm:text-sm font-light uppercase tracking-wide hover:underline"
-              href="#"
-            >
-              VIEW ALL
-            </a>
-          )}
+          <a
+            className="text-primary text-xs sm:text-sm font-light uppercase tracking-wide hover:underline hidden sm:flex"
+            href="#"
+          >
+            VIEW ALL
+          </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {bestSellers.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-        {isMobile && (
-          <div class="flex justify-center m-8">
-            <button class="bg-primary text-white px-5 py-3 font-body">
-              View All
-            </button>
-          </div>
-        )}
+        <div class="flex justify-center m-8">
+          <button class="bg-primary text-white px-5 py-3 font-body  sm:hidden">
+            View All
+          </button>
+        </div>
       </section>
     </>
   );
