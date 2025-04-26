@@ -1,137 +1,120 @@
-import Luxury from "/Luxury.png"
-import Sustainability from "/Sustainability.png"
-
+import Luxury from "/Luxury.png";
+import Sustainability from "/Sustainability.png";
 
 export function meta() {
-    return [
-      { title: "Acquasuisse - Catalogue" },
-      { name: "description", content: "Acquasuisse" },
-    ];
-  }
+  return [
+    { title: "Acquasuisse - Catalogue" },
+    { name: "description", content: "Acquasuisse" },
+  ];
+}
 
-  function ProductCard({ product }) {
-    return (
-      <div>
-        {/*should be img tag when we have photos for products, placeholder for now */}
-        <div className="bg-gray-300 w-full aspect-square"></div>
-  
-        <p className="text-sm font-body font-semibold mt-2">{product.name}</p>
-        <p className="text-xs font-body mt-1">{product.price}</p>
-      </div>
-    );
-  }
+export default function Product() {
+  const sizes = [
+    { size: "10 mL", price: "PHP 129.00" },
+    { size: "30 mL", price: "PHP 350.00" },
+    { size: "50 mL", price: "PHP 560.00" },
+    { size: "60 mL", price: "PHP 660.00" },
+    { size: "100 mL", price: "PHP 1070.00" },
+  ];
 
-  export default function Product() {
-    const sizes = [
-      { size: "10 mL", price: "PHP 129.00" },
-      { size: "30 mL", price: "PHP 350.00" },
-      { size: "50 mL", price: "PHP 560.00" },
-      { size: "60 mL", price: "PHP 660.00" },
-      { size: "100 mL", price: "PHP 1070.00" },
-    ];
+  const products = [
+    { name: "Product name", description: "Description", price: "PHP 00.00" },
+    { name: "Product name", description: "Description", price: "PHP 00.00" },
+    { name: "Product name", description: "Description", price: "PHP 00.00" },
+    { name: "Product name", description: "Description", price: "PHP 00.00" },
+    { name: "Product name", description: "Description", price: "PHP 00.00" },
+    { name: "Product name", description: "Description", price: "PHP 00.00" },
+  ];
 
-    const products = [
-      {name: "Product name", description: "Description", price: "PHP 00.00"},
-      {name: "Product name", description: "Description", price: "PHP 00.00"},
-      {name: "Product name", description: "Description", price: "PHP 00.00"},
-      {name: "Product name", description: "Description", price: "PHP 00.00"},
-      {name: "Product name", description: "Description", price: "PHP 00.00"},
-      {name: "Product name", description: "Description", price: "PHP 00.00"},
-    ]
-    
-    return (
-      <>
-      {/* Product Main Info includes Photos and Description */}
-      <section className="bg-white flex">
+  return (
+    <>
+      {/* Product Main Info */}
+      <section className="bg-white flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left">
+        {/* Photos */}
+        <div className="w-full lg:w-5/12 pt-12 pb-16 px-0 lg:px-20 flex flex-col items-center lg:items-start">
+  {/* Main PHOTO */}
+  <div className="bg-gray-500 w-full h-[22rem] mb-10 sm:rounded-none"></div>
 
-        {/* This is where photos go */}
-        <div className="block w-5/12 pt-26 pr-20 pb-28 pl-40">
-          {/* Main PHOTO */}
-          <div className="bg-gray-500 w-full h-4/5 mb-10"></div>
-          {/* OTHER PHOTOs */}
-          <div className="flex">
-            <div className="bg-gray-100 aspect-square w-1/4 mr-1"></div>
-            <div className="bg-gray-200 aspect-square w-1/4 mr-1 "></div>
-            <div className="bg-gray-300 aspect-square w-1/4 mr-1"></div>
-            <div className="bg-gray-400 aspect-square w-1/4 mr-1"></div>
+  {/* Thumbnails */}
+  <div className="flex justify-between w-full px-0 lg:gap-1">
+    <div className="bg-gray-100 w-[5.75rem] h-[3.6875rem]"></div>
+    <div className="bg-gray-200 w-[5.75rem] h-[3.6875rem]"></div>
+    <div className="bg-gray-300 w-[5.75rem] h-[3.6875rem]"></div>
+    <div className="bg-gray-400 w-[5.75rem] h-[3.6875rem]"></div>
+  </div>
+</div>
+
+        {/* Product Description */}
+        <div className="flex flex-col items-center lg:items-start w-full lg:w-7/12 pt-12 lg:pt-32 pr-6 lg:pr-32 pb-11 pl-6 lg:pl-8 text-center lg:text-left">
+          <h1 className="text-red-700 text-4xl mb-4">Scent Name</h1>
+          <h2 className="text-black text-base italic mb-12">Eau de Parfum</h2>
+
+          <p className="text-gray-500 text-xl mb-5">Main Accords:</p>
+          <p className="text-transform: uppercase; flex flex-wrap mb-5">
+            FLORAL, WHITE FLORAL, AQUATIC, FRUITY, TUBEROSE,
+            SWEET, POWDERY, MUSKY WOODY, FRESH, CITRUS
+          </p>
+
+          <p className="text-gray-500 text-xl mb-5">Inspired by:</p>
+          <p className="flex-wrap pb-11.5">Britney Spears Curious</p>
+
+          <div className="flex flex-wrap justify-center lg:justify-start pt-12 gap-2.5">
+            {sizes.map((product, index) => (
+              <div key={index} className="block">
+                <div className="align-middle text-xl text-center w-fit h-fit bg-gray-100 rounded-2xl border-black py-2.5 px-6.5">
+                  {product.size}
+                </div>
+                <p className="mb-5 mt-5 align-stretch text-center">{product.price}</p>
+              </div>
+            ))}
           </div>
-          
-        </div>
-
-        {/* Product Name, Type and Accord */}
-        <div className="flex flex-col items-start w-7/12 pt-32 pr-32 pb-11 pl-8">
-
-          {/*Product Name */}
-          <h1 className="font-heading text-red-700 text-4xl mb-4">Scent Name</h1>
-          
-          {/*Product Type */}
-          <h2 className="font-body text-black/50 text-base italic mb-12">Eau de Parfum</h2>
-
-          {/*Product Accord */}
-          <p className="font-body text-gray-500 text-xl mb-5">Main Accords:</p>
-          <p className="font-body text-transform: uppercase;flex flex-wrap mb-5">FLORAL, WHITE FLORAL, AQUATIC, FRUITY, TUBEROSE, 
-            SWEET, POWDERY, MUSKY WOODY, FRESH, CITRUS</p>
-          
-          <p className="font-body text-gray-500 text-xl mb-5">Inspired by:</p>
-          <p className="font-body flex-wrap pb-11.5">Britney Spears Curious</p>
-
-        {/* Sizes and Prices */}
-        <div className="flex flex-wrap pt-12 gap-2.5" >
-          {sizes.map((product, index)=>(
-            <div className="block">
-              <div className="align-middle text-xl text-center w-fit h-fit bg-gray-100 rounded-2xl border-black py-2.5 px-6.5">{product.size}</div>
-              <p className="font-body text-black/50 mt-5 align-stretch text-center">{product.price}</p>
-            </div>
-          ))}
-        </div>
         </div>
       </section>
 
-      {/* LUXURY PERFUME | STABILITY */}
-  <section className="flex justify-center items-start pt-11 pb-6 w-full gap-64">
-
-  {/* Luxury */}
-  <div className="w-80 flex flex-col items-center text-center text-red-700">
-    <img
-      src={Luxury}
-      alt="Luxury"
-      className="object-contain h-14 w-auto mb-4"
-    />
-    <h3 className="font-heading text-2xl mb-3">Luxury Perfume.</h3>
-    <p className="text-black/50 text-sm ">
-      REDISCOVER YOUR SIGNATURE SCENT.<br />
-      REUSE & REFILL YOUR BOTTLE.
-    </p>
-  </div>
-
-  {/* Sustainability */}
-    <div className="w-80 flex flex-col items-center text-center text-red-700">
-    <img
-      src={Sustainability}
-      alt="Sustainability"
-      className="object-contain h-14 w-auto mb-4"
-    />
-    <h3 className="font-heading text-2xl mb-3">Sustainability.</h3>
-    <p className="text-black/50 text-sm">
-    MADE WITH THE FINEST FRAGRANCE.<br />
-    OILS FROM SWITZERLAND.
-    </p>
-  </div>
-    </section>
-    
-  <section className="mx-auto pt-13 pb-26">
-  <h2 className="font-body text-gray-500 text-base mx-4 my-5">OTHER SCENTS</h2>
-  <div className="overflow-x-auto scrollbar-hide">
-    <div className="flex space-x-4 px-4 snap-x snap-mandatory">
-      {products.map((product) => (
-        <div key={product.id} className="min-w-[200px] snap-start">
-          <ProductCard product={product} />
+      {/* LUXURY & SUSTAINABILITY */}
+      <section className="flex flex-col md:flex-row justify-center items-center pt-11 pb-6 w-full gap-10 md:gap-64 px-6 text-center">
+        <div className="w-80 flex flex-col items-center text-red-700">
+          <img
+            src={Luxury}
+            alt="Luxury"
+            className="object-contain h-14 w-auto mb-4"
+          />
+          <h3 className="text-2xl mb-3">Luxury Perfume</h3>
+          <p className="text-black text-sm">
+            REDISCOVER YOUR SIGNATURE SCENT.<br />
+            REUSE & REFILL YOUR BOTTLE.
+          </p>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+
+        <div className="w-80 flex flex-col items-center text-red-700 mt-10 md:mt-0">
+          <img
+            src={Sustainability}
+            alt="Sustainability"
+            className="object-contain h-14 w-auto mb-4"
+          />
+          <h3 className="text-2xl mb-3">Sustainability</h3>
+          <p className="text-black text-sm">
+            REDISCOVER YOUR SIGNATURE SCENT.<br />
+            REUSE & REFILL YOUR BOTTLE.
+          </p>
+        </div>
+      </section>
+
+      {/* Other Scents */}
+      <section className="mx-auto pt-13 pb-26 w-full">
+        <h2 className="text-black text-base mx-4 my-5">Other Scents</h2>
+        <div className="overflow-x-auto scrollbar-hide">
+          <div className="flex space-x-4 px-4 snap-x snap-mandatory">
+            {products.map((product, index) => (
+              <div key={index} className="min-w-[160px] sm:min-w-[200px] md:min-w-[220px] snap-start">
+                <div className="bg-gray-200 aspect-square w-full"></div>
+                <p className="text-sm mt-2">{product.name}</p>
+                <p className="text-xs">{product.price}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
-    )
-  }
-  
+  );
+}
