@@ -149,7 +149,7 @@ export default function CategoryCarousel() {
         href="#"
         role="listitem"
         draggable={false}
-        className="flex-shrink-0 w-58 h-82 bg-center bg-cover flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline bg-gray-300 "
+        className="flex-shrink-0 w-63 h-92 bg-center bg-cover flex items-end justify-center hover:underline bg-gray-300 "
       >
         <span className="pb-4">FOR UNISEX</span>
       </a>
@@ -157,7 +157,7 @@ export default function CategoryCarousel() {
         href="#"
         role="listitem"
         draggable={false}
-        className="flex-shrink-0 w-58 h-82 bg-center bg-cover flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline bg-gray-300 "
+        className="flex-shrink-0 w-63 h-92 bg-center bg-cover flex items-end justify-center hover:underline bg-gray-300 "
       >
         <span className="pb-4">WOMEN'S</span>
       </a>
@@ -165,7 +165,7 @@ export default function CategoryCarousel() {
         href="#"
         role="listitem"
         draggable={false}
-        className="flex-shrink-0 w-58 h-82 bg-center bg-cover flex items-end justify-center h-40 md:h-90 lg:h-180 hover:underline bg-gray-300 "
+        className="flex-shrink-0 w-63 h-92 bg-center bg-cover flex items-end justify-center hover:underline bg-gray-300 "
       >
         <span className="pb-4">MEN'S</span>
       </a>
