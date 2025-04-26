@@ -9,6 +9,18 @@ export function meta() {
     ];
   }
 
+  function ProductCard({ product }) {
+    return (
+      <div>
+        {/*should be img tag when we have photos for products, placeholder for now */}
+        <div className="bg-gray-300 w-full aspect-square"></div>
+  
+        <p className="text-sm font-body font-semibold mt-2">{product.name}</p>
+        <p className="text-xs font-body mt-1">{product.price}</p>
+      </div>
+    );
+  }
+
   export default function Product() {
     const sizes = [
       { size: "10 mL", price: "PHP 129.00" },
@@ -46,24 +58,29 @@ export function meta() {
           
         </div>
 
-        {/* Product Title and Description */}
+        {/* Product Name, Type and Accord */}
         <div className="flex flex-col items-start w-7/12 pt-32 pr-32 pb-11 pl-8">
-          <h1 className="text-red-700 text-4xl mb-4">Scent Name</h1>
-          <h2 className="text-black text-base italic mb-12">Eau de Parfum</h2>
 
-          <p className="text-gray-500 text-xl mb-5">Main Accords:</p>
-          <p className="text-transform: uppercase;flex flex-wrap mb-5">FLORAL, WHITE FLORAL, AQUATIC, FRUITY, TUBEROSE, 
+          {/*Product Name */}
+          <h1 className="font-heading text-red-700 text-4xl mb-4">Scent Name</h1>
+          
+          {/*Product Type */}
+          <h2 className="font-body text-black/50 text-base italic mb-12">Eau de Parfum</h2>
+
+          {/*Product Accord */}
+          <p className="font-body text-gray-500 text-xl mb-5">Main Accords:</p>
+          <p className="font-body text-transform: uppercase;flex flex-wrap mb-5">FLORAL, WHITE FLORAL, AQUATIC, FRUITY, TUBEROSE, 
             SWEET, POWDERY, MUSKY WOODY, FRESH, CITRUS</p>
           
-          <p className="text-gray-500 text-xl mb-5">Inspired by:</p>
-          <p className="flex-wrap pb-11.5">Britney Spears Curious</p>
+          <p className="font-body text-gray-500 text-xl mb-5">Inspired by:</p>
+          <p className="font-body flex-wrap pb-11.5">Britney Spears Curious</p>
 
         {/* Sizes and Prices */}
         <div className="flex flex-wrap pt-12 gap-2.5" >
           {sizes.map((product, index)=>(
             <div className="block">
               <div className="align-middle text-xl text-center w-fit h-fit bg-gray-100 rounded-2xl border-black py-2.5 px-6.5">{product.size}</div>
-              <p className="mt-5 align-stretch text-center">{product.price}</p>
+              <p className="font-body text-black/50 mt-5 align-stretch text-center">{product.price}</p>
             </div>
           ))}
         </div>
@@ -80,8 +97,8 @@ export function meta() {
       alt="Luxury"
       className="object-contain h-14 w-auto mb-4"
     />
-    <h3 className="text-2xl mb-3">Luxury Perfume</h3>
-    <p className="text-black text-sm ">
+    <h3 className="font-heading text-2xl mb-3">Luxury Perfume.</h3>
+    <p className="text-black/50 text-sm ">
       REDISCOVER YOUR SIGNATURE SCENT.<br />
       REUSE & REFILL YOUR BOTTLE.
     </p>
@@ -94,22 +111,26 @@ export function meta() {
       alt="Sustainability"
       className="object-contain h-14 w-auto mb-4"
     />
-    <h3 className="text-2xl mb-3">Sustainability</h3>
-    <p className="text-black text-sm">
-      REDISCOVER YOUR SIGNATURE SCENT.<br />
-      REUSE & REFILL YOUR BOTTLE.
+    <h3 className="font-heading text-2xl mb-3">Sustainability.</h3>
+    <p className="text-black/50 text-sm">
+    MADE WITH THE FINEST FRAGRANCE.<br />
+    OILS FROM SWITZERLAND.
     </p>
   </div>
     </section>
     
-    <section className="flex-row">
-    <h2 className="text-black text-base mx-16 my-5">Other Scents</h2>
-    {products.map((item, index) => (
-      <div >
-
-      </div>
-    ))}
-    </section>
+  <section className="mx-auto pt-13 pb-26">
+  <h2 className="font-body text-gray-500 text-base mx-4 my-5">OTHER SCENTS</h2>
+  <div className="overflow-x-auto scrollbar-hide">
+    <div className="flex space-x-4 px-4 snap-x snap-mandatory">
+      {products.map((product) => (
+        <div key={product.id} className="min-w-[200px] snap-start">
+          <ProductCard product={product} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
     </>
     )
   }
