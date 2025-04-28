@@ -56,7 +56,7 @@ export default function Product() {
         <div className="w-full lg:w-5/12 pt-12 pb-16 px-0 lg:px-20 flex flex-col items-center lg:items-start">
           {/* Main PHOTO */}
           <div
-          className="bg-gray-500 w-full h-[22rem] mb-10 sm:rounded-none"
+          className="bg-gray-500 w-full h-[27rem] mb-10 sm:rounded-none"
           style={{ backgroundImage: `url("${product.image}")`, backgroundSize: 'cover' }}
           ></div>
 
