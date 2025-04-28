@@ -4,7 +4,7 @@ export default [
     layout("layouts/main.jsx", [
         index("routes/Home.jsx"),
         route("catalogue", "routes/Catalogue.jsx"),
-        route("product", "routes/product.jsx"),
+        route("product/:productId", "routes/Product.jsx"),
 
         route("about", "routes/about/About.jsx", [
             index("routes/about/Index.jsx"),
