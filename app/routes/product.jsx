@@ -62,11 +62,7 @@ export default function Product() {
 
 
           {/* Thumbnails */}
-          <div className="flex justify-between w-full px-0 lg:gap-1">
-            {Array(4).fill(null).map((_, index) => (
-              <div key={index} className="bg-gray-100 w-[5.75rem] h-[3.6875rem]"></div>
-            ))}
-          </div>
+          
         </div>
 
         {/* Product Description */}
@@ -137,7 +133,7 @@ export default function Product() {
     const bMatch = b.mainAccords?.includes(product.mainAccords) ? 1 : 0;
     return bMatch - aMatch;
   })
-  .slice(0, 5)
+  .slice(0, 10)
   .map(productCard)}
         </div>
       </div>
