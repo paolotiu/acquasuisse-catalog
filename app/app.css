@@ -1,44 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Julius+Sans+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Julius+Sans+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @font-face {
   font-family: "The Seasons";
-  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-reg.otf") format("opentype");
+  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-reg.otf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "The Seasons";
-  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-it.otf") format("opentype");
+  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-it.otf")
+    format("opentype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "The Seasons";
-  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-bd.otf") format("opentype");
+  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-bd.otf")
+    format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "The Seasons";
-  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-bdit.otf") format("opentype");
+  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-bdit.otf")
+    format("opentype");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "The Seasons";
-  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-lt.otf") format("opentype");
+  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-lt.otf")
+    format("opentype");
   font-weight: light;
   font-style: normal;
 }
 
 @font-face {
   font-family: "The Seasons";
-  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-ltit.otf") format("opentype");
+  src: url("/the-seasons-font/Fontspring-DEMO-theseasons-ltit.otf")
+    format("opentype");
   font-weight: light;
   font-style: italic;
 }
@@ -48,10 +54,16 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-body: "Montserrat", "Julius Sans One", sans-serif;
   --font-heading: "The Seasons", "Jost", serif;
-  --color-primary: #B71113;
-  --color-secondary-grey: #F8F7F4;
-  --color-secondary-blue: #F1FAFF;
-  --color-secondary-green: #A6A26A;
+  --color-primary: #b71113;
+  --color-secondary-grey: #f8f7f4;
+  --color-secondary-blue: #f1faff;
+  --color-secondary-green: #a6a26a;
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 html,
