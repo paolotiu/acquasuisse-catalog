@@ -54,26 +54,25 @@ export default function Navbar({ menu, setOpenBurger, openBurger }) {
           }
         >
           {menu.map((link) => (
-            <>
+            <div className="lg:p-2.5 lg:w-fit px-6 w-full flex flex-col cursor-pointer group"
+              onMouseEnter={() => setMenuHover(link.key)}
+              onFocus={() => setMenuFocus(link.key)}
+              onBlur={() => setMenuFocus(null)}
+              onClick={() =>
+                menuActive == link.key ? setMenuActive(null) : setMenuActive(link.key)
+              }
+            >
               <a
                 href={link.href}
-                className="lg:p-2.5 lg:w-fit px-6 w-full flex flex-row gap-[5px] items-center group"
-                onMouseEnter={() => setMenuHover(link.key)}
+                className="flex items-center w-fit uppercase gap-2.5 text-base/5 font-body group-hover:underline group-focus:underline underline-offset-6 p-2.5"
                 // onMouseLeave={() => setMenuHover("")}
-                onFocus={() => setMenuFocus(link.key)}
-                onBlur={() => setMenuFocus(null)}
-                onClick={() =>
-                  menuActive == link.key ? setMenuActive(null) : setMenuActive(link.key)
-                }
               >
-                <span className="uppercase text-base/5 font-body group-hover:underline group-focus:underline underline-offset-6 p-2.5">
-                  {link.heading}
-                </span>
+                <span>{link.heading}</span>
                 <ArrowRightIcon className="lg:fill-white fill-primary rotate-90 group-hover:-rotate-90 group-focus:-rotate-90 h-3 transition-transform" />
               </a>
               <ul
                 className={
-                  'lg:hidden font-body text-base/5 uppercase px-12.5' +
+                  'lg:hidden font-body text-base/5 uppercase px-6' +
                   (menuActive == link.key ? '' : ' hidden')
                 }
               >
@@ -83,7 +82,7 @@ export default function Navbar({ menu, setOpenBurger, openBurger }) {
                   </li>
                 ))}
               </ul>
-            </>
+            </div>
           ))}
         </div>
       </nav>
