@@ -9,7 +9,7 @@ export function meta() {
   ];
 }
 
-export default function faq() {
+export default function FAQ() {
   const item = faq_data;
   return (
     <>

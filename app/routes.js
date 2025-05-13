@@ -6,7 +6,7 @@ export default [
     route("catalogue", "routes/Catalogue.jsx"),
     route("about", "routes/about/About.jsx", [
       index("routes/about/Index.jsx"),
-      route("about-us", "routes/about/about.jsx"),
+      route("about-us", "routes/about/AboutUs.jsx"),
       route("branches", "routes/about/Branches.jsx"),
       route("faq", "routes/about/FAQ.jsx"),
     ]),
