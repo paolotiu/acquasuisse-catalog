@@ -6,15 +6,15 @@ export const menu = [
     sublinks: [
       {
         name: "New In",
-        href: "#"
+        href: "/discover/new-in"
       },
       {
         name: "Best Sellers",
-        href: "#"
+        href: "/discover/bestsellers"
       },
       {
         name: "View All",
-        href: "#"
+        href: "/discover/view-all"
       }
     ]
   },
@@ -25,15 +25,15 @@ export const menu = [
     sublinks: [
       {
         name: "Unisex",
-        href: "/catalogue"
+        href: "/catalogue/unisex"
       },
       {
         name: "For Men",
-        href: "#"
+        href: "/catalogue/men"
       },
       {
         name: "For Women",
-        href: "#"
+        href: "/catalogue/women"
       }
     ],
   },

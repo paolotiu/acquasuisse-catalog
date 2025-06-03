@@ -10,5 +10,17 @@ export default [
             route("branches", "routes/about/Branches.jsx"),
             route("faq", "routes/about/FAQ.jsx"),
         ]),
+        route("discover", "routes/discover/Discover.jsx", [
+            index("routes/discover/Discover-Index.jsx"),
+            route("new-in", "routes/discover/new_in.jsx"),
+            route("bestsellers", "routes/discover/bestsellers.jsx"),
+            route("view-all", "routes/discover/view_all.jsx"),
+            route("products", "routes/discover/products.js"),
+        ]),
+        route("catalogue", "routes/catalogue/Catalogue.jsx", [
+            route("men", "routes/catalogue/men.jsx"),
+            route("women", "routes/catalogue/women.jsx"),
+            route("unisex", "routes/catalogue/unisex.jsx"),
+        ])
     ])
 ];

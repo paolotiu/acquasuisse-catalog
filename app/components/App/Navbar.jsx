@@ -24,7 +24,17 @@ export default function Navbar({ menu, setOpenBurger, openBurger }) {
     return null;
   }
 
-  // console.log(`hover=${menuHover}, focus=${menuFocus}, active=${menuActive}`);
+const menuItems = [
+  {
+    key: 1,
+    heading: "Discover",
+    href: "/discover",
+    sublinks: [
+      { name: "VIEW ALL", href: "/" }, // Add catalog link here
+      { name: "NEW ARRIVALS", href: "/new-arrivals" },
+    ]
+  },
+];
 
   return (
     <>
