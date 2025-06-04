@@ -1,5 +1,5 @@
 
-import { bestSellers } from "./products2"; 
+import { unisex } from "./products2"; 
 
 export function meta() {
   return [
@@ -30,7 +30,7 @@ function ProductCard({ product }) {
   );
 }
 
-export default function BestSellers() {
+export default function UnisexPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-white dark:bg-gray-900">
       <div className="w-full py-24 bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-12">
@@ -61,7 +61,7 @@ export default function BestSellers() {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-        {bestSellers.map((product) => (
+        {unisex.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
