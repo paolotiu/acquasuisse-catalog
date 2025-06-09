@@ -5,18 +5,18 @@ export const menu = [
     href: '#',
     sublinks: [
       {
-        name: 'New In',
-        href: '#',
+        name: "New In",
+        href: "/discover/new-in"
       },
       {
-        name: 'Best Sellers',
-        href: '#',
+        name: "Best Sellers",
+        href: "/discover/bestsellers"
       },
       {
-        name: 'View All',
-        href: '#',
-      },
-    ],
+        name: "View All",
+        href: "/discover/view-all"
+      }
+    ]
   },
   {
     key: 2,
@@ -24,17 +24,17 @@ export const menu = [
     href: '#',
     sublinks: [
       {
-        name: 'Unisex',
-        href: '/catalogue',
+        name: "Unisex",
+        href: "/catalogue/unisex"
       },
       {
-        name: 'For Men',
-        href: '#',
+        name: "For Men",
+        href: "/catalogue/men"
       },
       {
-        name: 'For Women',
-        href: '#',
-      },
+        name: "For Women",
+        href: "/catalogue/women"
+      }
     ],
   },
   {
