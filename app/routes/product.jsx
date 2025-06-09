@@ -105,7 +105,7 @@ export default function Product() {
             REUSE & REFILL YOUR BOTTLE.
           </p>
         </div>
-
+   
         <div className="w-80 flex flex-col items-center text-red-700 mt-10 md:mt-0">
           <img
             src={Sustainability}
