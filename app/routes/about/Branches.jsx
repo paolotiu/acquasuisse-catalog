@@ -1,3 +1,4 @@
+
 export function meta() {
   return [
     { title: "Acquasuisse - Branches" },
@@ -5,8 +6,12 @@ export function meta() {
   ];
 }
 
+
 export default function Branches() {
   return (
-    <h1>Branches</h1>
+    <>
+      <h1>Branches</h1>
+      
+    </>
   )
 }

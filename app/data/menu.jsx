@@ -40,7 +40,7 @@ export const menu = [
   {
     key: 3,
     heading: 'About',
-    href: '#',
+    href: '/about',
     sublinks: [
       {
         name: 'About Us',

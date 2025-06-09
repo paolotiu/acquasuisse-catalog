@@ -54,26 +54,25 @@ export default function Navbar({ menu, setOpenBurger, openBurger }) {
           }
         >
           {menu.map((link) => (
-            <>
+            <div className="lg:p-2.5 lg:w-fit px-6 w-full flex flex-col cursor-pointer group"
+              onMouseEnter={() => setMenuHover(link.key)}
+              onFocus={() => setMenuFocus(link.key)}
+              onBlur={() => setMenuFocus(null)}
+              onClick={() =>
+                menuActive == link.key ? setMenuActive(null) : setMenuActive(link.key)
+              }
+            >
               <a
                 href={link.href}
-                className="lg:p-2.5 lg:w-fit px-6 w-full flex flex-row gap-[5px] items-center group"
-                onMouseEnter={() => setMenuHover(link.key)}
+                className="flex items-center w-fit uppercase gap-2.5 text-base/5 font-body group-hover:underline group-focus:underline underline-offset-6 p-2.5"
                 // onMouseLeave={() => setMenuHover("")}
-                onFocus={() => setMenuFocus(link.key)}
-                onBlur={() => setMenuFocus(null)}
-                onClick={() =>
-                  menuActive == link.key ? setMenuActive(null) : setMenuActive(link.key)
-                }
               >
-                <span className="uppercase text-base/5 font-body group-hover:underline group-focus:underline underline-offset-6 p-2.5">
-                  {link.heading}
-                </span>
+                <span>{link.heading}</span>
                 <ArrowRightIcon className="lg:fill-white fill-primary rotate-90 group-hover:-rotate-90 group-focus:-rotate-90 h-3 transition-transform" />
               </a>
               <ul
                 className={
-                  'lg:hidden font-body text-base/5 uppercase px-12.5' +
+                  'lg:hidden font-body text-base/5 uppercase px-6' +
                   (menuActive == link.key ? '' : ' hidden')
                 }
               >
@@ -83,13 +82,13 @@ export default function Navbar({ menu, setOpenBurger, openBurger }) {
                   </li>
                 ))}
               </ul>
-            </>
+            </div>
           ))}
         </div>
       </nav>
       <nav
         className={
-          'lg:flex bg-white justify-center gap-12.5 px-12.5 fixed top-[60px] w-full hidden' +
+          'lg:flex dark:bg-gray-950 bg-white justify-center gap-12.5 px-12.5 fixed top-[60px] w-full hidden' +
           (menuHover || menuFocus ? ' py-2' : '')
         }
         onMouseLeave={() => setMenuHover('')}
@@ -98,7 +97,7 @@ export default function Navbar({ menu, setOpenBurger, openBurger }) {
           menu[handleHoverActive() - 1].sublinks.map((link) => (
             <a
               href={link.href}
-              className="hover:underline underline-offset-5 text-primary font-body p-2.5"
+              className="hover:underline underline-offset-5 dark:text-white text-primary font-body p-2.5"
             >
               {link.name}
             </a>
@@ -106,16 +105,16 @@ export default function Navbar({ menu, setOpenBurger, openBurger }) {
       </nav>
       <div
         className={
-          'fixed bg-white flex items-center justify-between top-[60px] w-full px-12.5 py-4 gap-4' +
+          'fixed dark:bg-gray-950 bg-white flex items-center justify-between top-[60px] w-full px-12.5 py-4 gap-4' +
           (searchShow ? '' : ' hidden')
         }
       >
         <input
-          className="font-body text-primary text-base/5 py-2.5 focus:outline-none w-full"
+          className="font-body text-primary text-base/5 py-2.5 focus:outline-none w-full dark:text-white"
           type="text"
           placeholder="Search product..."
         />
-        <SearchIcon className="fill-none stroke-primary h-4" />
+        <SearchIcon className="fill-none dark:stroke-white stroke-primary h-4" />
       </div>
     </>
   );
