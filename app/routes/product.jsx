@@ -51,7 +51,7 @@ export default function Product() {
   return (
     <>
       {/* Product Main Info */}
-      <section className="bg-white flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left">
+      <section className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left">
         {/* Photos */}
         <div className="w-full lg:w-5/12 pt-12 pb-16 px-0 lg:px-20 flex flex-col items-center lg:items-start">
           {/* Main PHOTO */}
@@ -81,10 +81,10 @@ export default function Product() {
           <div className="flex flex-wrap justify-center lg:justify-start pt-12 gap-2.5">
             {sizes.map((size, index) => (
               <div key={index} className="block">
-                <div className="align-middle text-xl text-center w-fit h-fit bg-gray-100 rounded-2xl border-black py-2.5 px-6.5">
+                <div className="align-middle text-xl text-center w-fit h-fit rounded-2xl border border-white py-2.5 px-6.5">
                   {size.size}
                 </div>
-                <p className="font-body text-black/50 mb-5 mt-5 align-stretch text-center">{size.price}</p>
+                <p className="font-body text-white/50 mb-5 mt-5 align-stretch text-center">{size.price}</p>
               </div>
             ))}
           </div>
@@ -100,7 +100,7 @@ export default function Product() {
             className="object-contain h-14 w-auto mb-4"
           />
           <h3 className="text-2xl mb-3">Luxury Perfume</h3>
-          <p className="text-black text-sm">
+          <p className="text-white text-sm">
             REDISCOVER YOUR SIGNATURE SCENT.<br />
             REUSE & REFILL YOUR BOTTLE.
           </p>
@@ -113,7 +113,7 @@ export default function Product() {
             className="object-contain h-14 w-auto mb-4"
           />
           <h3 className="text-2xl mb-3">Sustainability</h3>
-          <p className="text-black text-sm">
+          <p className="text-white text-sm">
             REDISCOVER YOUR SIGNATURE SCENT.<br />
             REUSE & REFILL YOUR BOTTLE.
           </p>
