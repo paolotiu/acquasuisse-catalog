@@ -68,7 +68,7 @@ export default function Product({ params }) {
 
         {/* Product Description */}
         <div className="flex flex-col items-center lg:items-start w-full lg:w-7/12 pt-12 lg:pt-32 pr-6 lg:pr-32 pb-11 pl-6 lg:pl-8 text-center lg:text-left">
-          <h1 className="font-heading text-red-700 text-4xl mb-4">{product.name}</h1>
+          <h1 className="uppercase font-heading text-red-700 text-4xl mb-4">{product.name}</h1>
           <h2 className="font-body text-black/50 dark:text-white/50 text-base italic mb-12">Eau de Parfum</h2>
 
           <p className="font-body text-gray-500 text-xl mb-5">Main Accords:</p>
