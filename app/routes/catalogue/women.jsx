@@ -1,5 +1,6 @@
 
 import { women } from "./products2"; 
+import { Link } from 'react-router';
 
 export function meta() {
   return [
@@ -62,7 +63,10 @@ export default function WomenPage() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {women.map((product) => (
+          <Link to={`/product/${product.id}`}>
+
           <ProductCard key={product.id} product={product} />
+          </Link>
         ))}
       </div>
     </div>

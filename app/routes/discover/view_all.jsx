@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 
 import { bestSellers } from "./products";
 import { newProducts } from "./products"; 
@@ -63,13 +64,18 @@ export default function BestSellers() {
 
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-12">
   {newProducts.map((product) => (
+    <Link to={`/product/${product.id}`}>
     <ProductCard key={product.id} product={product} />
+    </Link>
   ))}
 </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {bestSellers.map((product) => (
+          <Link to={`/product/${product.id}`}>
+
           <ProductCard key={product.id} product={product} />
+          </Link>
         ))}
       </div>
     </div>

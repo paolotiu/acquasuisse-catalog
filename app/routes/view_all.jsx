@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-// in progress
-=======
 import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import ArrowDownIcon from "../assets/icons/ArrowDownIcon";
@@ -85,4 +82,3 @@ export default function ProductCatalog() {
     </>
   );
 }
->>>>>>> Stashed changes
