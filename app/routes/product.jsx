@@ -1,6 +1,6 @@
 
 import { useParams, Link } from "react-router-dom";
-import { products } from "../data/products";
+import { products } from "../data/products.jsx";
 
 import Luxury from "/Luxury.png";
 import Sustainability from "/Sustainability.png";
@@ -73,7 +73,7 @@ export default function Product({ params }) {
 
           <p className="font-body text-gray-500 text-xl mb-5">Main Accords:</p>
           <p className="font-body text-transform: uppercase; flex flex-wrap mb-5">
-            {product.mainAccords}
+            {product.description}
           </p>
 
           <p className="text-gray-500 text-xl mb-5">Inspired by:</p>

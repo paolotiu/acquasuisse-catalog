@@ -12,7 +12,7 @@ export const bestSellers = [
     tags: ["bestseller"], // NEEDED FOR FILTERING FUNCTION
   },
   {
-    id: 2,
+    id: 3,
     name: "Cracko",
     description: "WOODY, FRUITY, EARTHY, WARM, SPICY",
     price: "PHP 594.00",
@@ -21,7 +21,7 @@ export const bestSellers = [
   },
   {
     // HAVE TO DOUBLE CHECK PRICE HERE
-    id: 3,
+    id: 5,
     name: "Knight",
     description: "WOODY, FRUITY, EARTHY, WARM, SPICY",
     price: "PHP 504.00",
@@ -29,7 +29,7 @@ export const bestSellers = [
     tags: ["bestseller"],
   },
   {
-    id: 4,
+    id: 6,
     name: "Purple Quartz",
     description: "POWDERY, IRIS, VANILLA, WOODY, ALMOND, FLORAL, VIOLET, GREEN, EARTHY, CITRUS",
     price: "PHP 504.00",
@@ -37,7 +37,7 @@ export const bestSellers = [
     tags: ["bestseller"],
   },
   {
-    id: 5,
+    id: 4,
     name: "Freesia",
     description: "FLORAL, FRUITY, SWEET, ROSE, AQUATIC, MUSKY, FRESH, PATCHOULI, GREEN, POWDERY",
     price: "PHP 504.00",
@@ -45,7 +45,7 @@ export const bestSellers = [
     tags: ["bestseller"],
   },
   {
-    id: 6,
+    id: 2,
     name: "Black Luxe",
     description: "SWEET, FRUITY, VANILLA, ROSE",
     price: "PHP 504.00",
@@ -57,7 +57,7 @@ export const bestSellers = [
 // new products
 export const newProducts = [
   {
-    id: 7,
+    id: 56,
     name: "bruh idk the new products",
     description: "AMBER, MUSKY, FRESH, SPICY",
     price: "PHP 990.00",
@@ -65,7 +65,7 @@ export const newProducts = [
     tags: ["new"],
   },
   {
-    id: 8,
+    id: 57,
     name: "Ocean Bloom",
     description: "AQUATIC, FLORAL, FRESH, CLEAN",
     price: "PHP 1,200.00",

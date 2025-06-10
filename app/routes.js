@@ -17,7 +17,6 @@ export default [
             route("bestsellers", "routes/discover/bestsellers.jsx"),
             route("view-all", "routes/discover/view_all.jsx"),
         ]),
-        route("product/:productId", "routes/product.jsx"),
         route("catalogue", "routes/catalogue/Catalogue.jsx", [
             route("men", "routes/catalogue/men.jsx"),
             route("women", "routes/catalogue/women.jsx"),

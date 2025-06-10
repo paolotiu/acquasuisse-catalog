@@ -1,421 +1,468 @@
 export const products = {
-  1: {
+  // Bestsellers
+  1:{
     name: "Army",
     description: "AROMATIC, WOODY, CITRUS, LAVENDER",
     price: "PHP 594.00",
     image: "/images/ARMY.png",
     tags: ["bestseller", "men"],
   },
-  2: {
+  {
     name: "Black Luxe",
     description: "SWEET, FRUITY, VANILLA, ROSE",
     price: "PHP 504.00",
     image: "/images/BLACK-LUXE.png",
     tags: ["bestseller", "women"],
   },
-  3: {
+  {
+    id: 3,
     name: "Cracko",
     description: "WOODY, FRUITY, EARTHY, WARM, SPICY",
     price: "PHP 594.00",
     image: "/images/CRACKO.png",
     tags: ["bestseller", "men"],
   },
-  4: {
+  {
+    id: 4,
     name: "Freesia",
     description: "FLORAL, FRUITY, SWEET, ROSE, AQUATIC, MUSKY, FRESH, PATCHOULI, GREEN, POWDERY",
     price: "PHP 504.00",
     image: "/images/FREESIA.png",
     tags: ["bestseller", "women"],
   },
-  5: {
+  {
+    id: 5,
     name: "Knight",
     description: "WOODY, FRUITY, EARTHY, WARM, SPICY",
     price: "PHP 504.00",
     image: "/images/KNIGHT.png",
     tags: ["bestseller", "men"],
   },
-  6: {
+  {
+    id: 6,
     name: "Purple Quartz",
     description: "POWDERY, IRIS, VANILLA, WOODY, ALMOND, FLORAL, VIOLET, GREEN, EARTHY, CITRUS",
     price: "PHP 504.00",
     image: "/images/PURPLE-QUARTZ.png",
     tags: ["bestseller", "women"],
   },
-  7: {
+
+  // Men (other)
+  {
+    id: 7,
     name: "Adrenaline",
     description: "CITRUS, WARM SPICY, COFFEE, WOODY",
     price: "PHP 660.00-1,070.00",
     image: "/images/ADRENALINE.png",
     tags: ["men"],
   },
-  8: {
+  {
+    id: 8,
     name: "Aquatic",
     description: "MARINE, FRESH SPICY, AMBER, WOODY",
     price: "PHP 660.00-1,070.00",
     image: "/images/AQUATIC.png",
     tags: ["men"],
   },
-  9: {
+  {
+    id: 9,
     name: "Bliss",
     description: "CITRUS, GREEN, AROMATIC, MARINE, WOODY",
     price: "PHP 660.00-1,070.00",
     image: "/images/BLISS.png",
     tags: ["men"],
   },
-  10: {
+  {
+    id: 10,
     name: "Carrera",
     description: "FRUITY, VANILLA, CINNAMON, POWDERY, WOODY",
     price: "PHP 660.00-1,070.00",
     image: "/images/CARRERA.png",
     tags: ["men"],
   },
-  11: {
+  {
+    id: 11,
     name: "Cavalier",
     description: "CITRUS, AROMATIC, FRESH SPICY, WOODY, FLORAL",
     price: "PHP 660.00-1,070.00",
     image: "/images/CAVALIER.png",
     tags: ["men"],
   },
-  12: {
+  {
+    id: 12,
     name: "Cool",
     description: "AROMATIC, LAVENDER, WOODY",
     price: "PHP 660.00-1,070.00",
     image: "/images/COOL.png",
     tags: ["men"],
   },
-  13: {
+  {
+    id: 13,
     name: "Deep Blue",
     description: "AROMATIC, AQUATIC, OZONIC, CITRUS, EARTHY",
     price: "PHP 660.00-1,070.00",
     image: "/images/DEEP-BLUE.png",
     tags: ["men"],
   },
-  14: {
+  {
+    id: 14,
     name: "Game",
     description: "AQUATIC, CITRUS, FRESH SPICY, FRUITY, WOODY",
     price: "PHP 660.00-1,070.00",
     image: "/images/GAME.png",
     tags: ["men"],
   },
-  15: {
+  {
+    id: 15,
     name: "Invincible",
     description: "CITRUS, MARINE, FRESH SPICY, WOODY, AMBER",
     price: "PHP 660.00-1,070.00",
     image: "/images/INVINCIBLE.png",
     tags: ["men"],
   },
-  16: {
+  {
+    id: 16,
     name: "Infinity",
     description: "AROMATIC, CITRUS, SPICY, WOODY, LAVENDER, WHITE FLORAL, HERBAL",
     price: "PHP 660.00-1,070.00",
     image: "/images/INFINITY.png",
     tags: ["men"],
   },
-  17: {
+  {
+    id: 17,
+    name: "Knight", // duplicate avoided
+    // skipped
+  },
+  {
+    id: 17, // bump ID
     name: "Marine",
     description: "AQUATIC, CITRUS, AROMATIC, MARINE, FRESH SPICY, WOODY",
     price: "PHP 660.00-1,070.00",
     image: "/images/MARINE.png",
     tags: ["men"],
   },
-  18: {
+  {
+    id: 18,
     name: "Playtime",
     description: "POWDERY, FRESH SPICY, LEATHER, VANILLA, MUSKY",
     price: "PHP 660.00-1,070.00",
     image: "/images/PLAYTIME.png",
     tags: ["men"],
   },
-  19: {
+  {
+    id: 19,
     name: "Power",
     description: "AROMATIC, GREEN, SOFT SPICY, ROSE, PATCHOULI",
     price: "PHP 660.00-1,070.00",
     image: "/images/POWER.png",
     tags: ["men"],
   },
-  20: {
+  {
+    id: 20,
     name: "Quest",
     description: "CITRUS, VANILLA, FRUITY, FRESH, ROSE, WOODY, POWDERY",
     price: "PHP 660.00-1,070.00",
     image: "/images/QUEST.png",
     tags: ["men"],
   },
-  21: {
+  {
+    id: 21,
     name: "Refreshing",
     description: "GREEN, POWDERY, VIOLET, EARTHY, FLORAL",
     price: "PHP 129.00-560.00",
     image: "/images/REFRESHING.png",
     tags: ["men"],
   },
-  22: {
+  {
+    id: 22,
     name: "Sex Appeal",
     description: "WOODY, AQUATIC, FRESH SPICY, CHOCOLATE, PATCHOULI",
     price: "PHP 660.00-1,070.00",
     image: "/images/SEX-APPEAL.png",
     tags: ["men"],
   },
-  23: {
+  {
+    id: 23,
     name: "Sporty",
     description: "AROMATIC, FRESH, WOODY, LAVENDER, MARINE",
     price: "PHP 660.00-1,070.00",
     image: "/images/SPORTY.png",
     tags: ["men"],
   },
-  24: {
+  {
+    id: 24,
     name: "Summertime",
     description: "AROMATIC, SWEET, MUSKY, WOODY, POWDERY",
     price: "PHP 660.00-1,070.00",
     image: "/images/SUMMERTIME.png",
     tags: ["men"],
   },
-  25: {
+  {
+    id: 25,
     name: "White Armour",
     description: "WOODY, YELLOW FLORAL, FRESH SPICY, LEATHER, SWEET",
     price: "PHP 660.00-1,070.00",
     image: "/images/WHITE-ARMOR.png",
     tags: ["men"],
   },
-  26: {
+  {
+    id: 26,
     name: "Wilde",
     description: "FRESH SPICY, AMBER, CITRUS, AROMATIC, MUSKY, WOODY, LAVENDER, HERBAL, WARM SPICY",
     price: "PHP 660.00-1,070.00",
     image: "/images/WILDE.png",
     tags: ["men"],
   },
-  27: {
+
+  // Women
+  {
+    id: 27,
     name: "Always",
     description: "FLORAL, WHITE FLORAL, AQUATIC, FRUITY, TUBEROSE, SWEET, POWDERY, MUSKY,& CITRUS",
     price: "PHP 660.00-1,070.00",
     image: "/images/ALWAYS.png",
     tags: ["women"],
   },
-  28: {
+  {
+    id: 28,
     name: "Blossom",
     description: "FRUITY, SWEET, GREEN, POWDERY, FRESH, WHITE FLORAL",
     price: "PHP 660.00-1,070.00",
     image: "/images/BLOSSOM.png",
     tags: ["women"],
   },
-  29: {
+  {
+    id: 29,
     name: "Blue Sky",
     description: "CITRUS, WOODY, FRESH, FRUITY, AROMATIC, MUSKY, POWDERY, GREEN",
     price: "PHP 660.00-1,070.00",
     image: "/images/BLUE-SKY.png",
     tags: ["women"],
   },
-  30: {
+  {
+    id: 30,
     name: "Care Free",
     description: "FRUITY, VANILLA, SWEET, POWDERY, WHITE FLORAL, FRESH, MUSKY, PATCHOULI, AMBER, CITRUS",
     price: "PHP 660.00-1,070.00",
     image: "/images/CAREFREE.png",
     tags: ["women"],
   },
-  31: {
+  {
+    id: 31,
     name: "Desire",
     description: "GREEN, FRUITY, AQUATIC, OZONIC, FRESH, CITRUS, WHITE FLORAL, FLORAL, FRESH SPICY, WOODY",
     price: "PHP 660.00-1,070.00",
     image: "/images/DESIRE.png",
     tags: ["women"],
   },
-  32: {
+  {
+    id: 32,
     name: "Destiny",
     description: "MUSKY, PATCHOULI, POWDERY, WHITE FLORAL, WOODY, SOFT SPICY, EARTHY, VANILLA, WARM SPICY, IRIS",
     price: "PHP 660.00-1,070.00",
     image: "/images/DESTINY.png",
     tags: ["women"],
   },
-  33: {
+  {
+    id: 33,
     name: "Empress",
     description: "FRUITY, WHITE FLORAL, FRESH, FLORAL, SWEET, POWDERY, OZONIC, AQUATIC, GREEN, YELLOW FLORAL",
     price: "PHP 660.00-1,070.00",
     image: "/images/EMPRESS.png",
     tags: ["women"],
   },
-  34: {
+  {
+    id: 34,
     name: "Enchanted",
     description: "FRUITY, SWEET, TROPICAL, FRESH, FLORAL, CITRUS, POWDERY",
     price: "PHP 660.00-1,070.00",
     image: "/images/ENCHANTED.png",
     tags: ["women"],
   },
-  35: {
+  {
+    id: 35,
     name: "Famous",
     description: "FLORAL, HONEY, SWEET, FRUITY, AMBER, POWDERY, SMOKY, WARM SPICY, WHITE FLORAL, LACTONIC",
     price: "PHP 660.00-1,070.00",
     image: "/images/FAMOUS.png",
     tags: ["women"],
   },
-  36: {
+  {
+    id: 36,
     name: "Fantasy",
     description: "SWEET, FRUITY, TROPICAL, FRESH, CHOCOLATE",
     price: "PHP 660.00-1,070.00",
     image: "/images/FANTASY.png",
     tags: ["women"],
   },
-  37: {
+  {
+    id: 37,
     name: "Flirt",
     description: "FRUITY, SWEET, VANILLA, FLORAL, FRESH, POWDERY, MUSKY, SOUR, CITRUS",
     price: "PHP 660.00-1,070.00",
     image: "/images/FLIRT.png",
     tags: ["women"],
   },
-  38: {
+  {
+    id: 38,
     name: "Flower",
     description: "POWDERY, FLORAL, VIOLET, ROSE, AMBER, VANILLA, MUSKY, SWEET, BALSAMIC, WOODY",
     price: "PHP 660.00-1,070.00",
     image: "/images/FLOWER.png",
     tags: ["women"],
   },
-  39: {
+  {
+    id: 39,
     name: "Girl Crush",
     description: "SWEET, WHITE FLORAL, WARM SPICY, VANILLA, CACAO, AMBER, WOODY, TUBEROSE, ALMOND, POWDERY",
     price: "PHP 660.00-1,070.00",
     image: "/images/GIRL-CRUSH.png",
     tags: ["women"],
   },
-  40: {
+  {
+    id: 40,
     name: "Glad",
     description: "CITRUS, FLORAL, WHITE FLORAL, SWEET, FRESH SPICY, GREEN",
     price: "PHP 660.00-1,070.00",
     image: "/images/GLAD.png",
     tags: ["women"],
   },
-  41: {
+  {
+    id: 41,
     name: "Green Tea",
     description: "CITRUS, GREEN, AROMATIC, FRESH SPICY, FRESH",
     price: "PHP 660.00-1,070.00",
     image: "/images/GREEN-TEA.png",
     tags: ["women"],
   },
-  42: {
+  {
+    id: 42,
     name: "Heaven",
     description: "FRUITY, FRESH, FLORAL, POWDERY, CITRUS, GREEN, FRESH SPICY, WHITE FLORAL, MUSKY, ROSE",
     price: "PHP 660.00-1,070.00",
     image: "/images/HEAVEN.png",
     tags: ["women"],
   },
-  43: {
+  {
+    id: 43,
     name: "Instinct",
     description: "FRUITY, POWDERY, WOODY, VANILLA, SWEET, MUSKY",
     price: "PHP 660.00-1,070.00",
     image: "/images/INSTINCT.png",
     tags: ["women"],
   },
-  44: {
+  {
+    id: 44,
     name: "Kitty",
     description: "VANILLA, WHITE FLORAL, SWEET, FRUITY, POWDERY, CITRUS, AQUATIC, AMBER, FRESH, MUSKY",
     price: "PHP 660.00-1,070.00",
     image: "/images/KITTY.png",
     tags: ["women"],
   },
-  45: {
+  {
+    id: 45,
     name: "Moment",
     description: "FRUITY, WOODY, FLORAL, CITRUS, SOFT SPICY, MUSKY, SOUR, FRESH, TROPICAL",
     price: "PHP 660.00-1,070.00",
     image: "/images/MOMENT.png",
     tags: ["women"],
   },
-  46: {
+  {
+    id: 46,
     name: "Pink Affection",
     description: "CITRUS, FLORAL, FRUITY, SWEET, VANILLA, TROPICAL, WHITE FLORAL, POWDERY, FRESH",
     price: "PHP 660.00-1,070.00",
     image: "/images/PINK-AFFECTION.png",
     tags: ["women"],
   },
-  47: {
+  {
+    id: 47,
     name: "Precise",
     description: "FRUITY, SWEET, FRESH, FLORAL, MUSKY, GREEN, TROPICAL, POWDERY",
     price: "PHP 660.00-1,070.00",
     image: "/images/PRECISE.png",
     tags: ["women"],
   },
-  48: {
+  {
+    id: 48,
     name: "Scarlet",
     description: "CITRUS, FLORAL, WHITE FLORAL, FRUITY, AROMATIC, ROSE, GREEN, POWDERY, WOODY, FRESH SPICY",
     price: "PHP 660.00-1,070.00",
     image: "/images/SCARLET.png",
     tags: ["women"],
   },
-  49: {
+  {
+    id: 49,
     name: "Seduction",
     description: "FRUITY, SWEET, WOODY, VANILLA, CITRUS, POWDERY, WHITE FLORAL, RUM",
     price: "PHP 660.00-1,070.00",
     image: "/images/SEDUCTION.png",
     tags: ["women"],
   },
-  50: {
+  {
+    id: 50,
     name: "Sexy",
     description: "FLORAL, FRUITY, WOODY, YELLOW FLORAL, SWEET, FRESH, FRESH SPICY, GREEN, HERBAL",
     price: "PHP 660.00-1,070.00",
     image: "/images/SEXY.png",
     tags: ["women"],
   },
-  51: {
+  {
+    id: 51,
     name: "Serendipity",
     description: "WARM SPICY, MUSKY, COCONUT, OZONIC, WOODY, AQUATIC, WHITE FLORAL, POWDERY, SWEET, CITRUS",
     price: "PHP 660.00-1,070.00",
     image: "/images/SERENDIPITY.png",
     tags: ["women"],
   },
-  52: {
+  {
+    id: 52,
     name: "Stylish",
     description: "FLORAL, FRESH, GREEN",
     price: "PHP 660.00-1,070.00",
     image: "/images/STYLISH.png",
     tags: ["women"],
   },
-  53: {
+  {
+    id: 53,
     name: "Sundown",
     description: "TROPICAL, FRUITY, SWEET",
     price: "PHP 660.00-1,070.00",
     image: "/images/SUNDOWN.png",
     tags: ["women"],
   },
-  54: {
+  {
+    id: 54,
     name: "Sweet Heart",
     description: "FRUITY, SWEET, FLORAL, CITRUS, WHITE FLORAL, POWDERY",
     price: "PHP 660.00-1,070.00",
     image: "/images/SWEET-HEART.png",
     tags: ["women"],
   },
-  55: {
+  {
+    id: 55,
     name: "Tiffany",
-    description: "_CITRUS, WOODY, FRESH, FRUITY, AROMATIC, MUSKY, POWDERY, GREEN",
+    description: "CITRUS, WOODY, FRESH, FRUITY, AROMATIC, MUSKY, POWDERY, GREEN",
     price: "PHP 660.00-1,070.00",
     image: "/images/TIFFANY.png",
     tags: ["women"],
   },
-  56: {
+
+  // New products (if not already existing)
+  {
+    id: 56,
     name: "bruh idk the new products",
     description: "AMBER, MUSKY, FRESH, SPICY",
     price: "PHP 990.00",
     image: "/images/products/product7.jpg",
     tags: ["new"],
   },
-  57: {
+  {
+    id: 57,
     name: "Ocean Bloom",
     description: "AQUATIC, FLORAL, FRESH, CLEAN",
     price: "PHP 1,200.00",
     image: "/images/products/product8.jpg",
     tags: ["new"],
   },
-  58: {
-    name: "Feel Me",
-        description: "FRUITY, SWEET, TROPICAL, VANILLA, CHOCOLATE",
-        price: "PHP 660.00-1,070.00",
-        image: "/images/CARRERA.png",
-        tags: ["/images/FEEL-ME.png"],
-  },
-  59: {name: "Sandalwood",
-        description: "WOODY, POWDERY, WARM SPICY, VIOLET",
-        price: "PHP 129-560",
-        image: "/images/SANDALWOOD.png",
-        tags: [""],
-      },
-      60: {
-         name: "Baccarat",
-        description: "WOODY, AMBER, WARM SPICY, FRESH SPICY, METALLIC, AROMATIC, WHITE FLORAL, ANIMALIC",
-        price: "PHP 660-1,070",
-        image: "/images/BACCARAT.png",
-        tags: [""],
-      }
 };
