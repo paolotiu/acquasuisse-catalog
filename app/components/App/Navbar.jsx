@@ -27,7 +27,7 @@ export default function Navbar({ menu, setOpenBurger, openBurger }) {
 
   return (
     <>
-      <nav className="fixed top-0 w-full">
+      <nav className="fixed top-0 w-full z-2">
         <div className="bg-primary flex justify-between items-center px-5 md:px-12.5 h-[60px]">
           <a href="/">
             <img src={logo} alt="Acquasuisse Logo" className="h-5 md:h-6 mt-1" />
