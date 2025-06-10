@@ -1,5 +1,5 @@
 
-import { useParams, Link} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products";
 
 import Luxury from "/Luxury.png";
@@ -32,8 +32,9 @@ function productCard(similarProduct, index) {
   );
 }
 
-export default function Product() {
-  const { productId } = useParams(); // Get productId from URL params
+export default function Product({ params }) {
+  console.log(params);
+  const { productId } = params; // Get productId from URL params
   const product =  products[parseInt(productId, 10)];  // Dynamically select the product based on the ID
   
   const sizes = [
