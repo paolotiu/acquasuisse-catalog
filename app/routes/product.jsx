@@ -69,7 +69,7 @@ export default function Product({ params }) {
         {/* Product Description */}
         <div className="flex flex-col items-center lg:items-start w-full lg:w-7/12 pt-12 lg:pt-32 pr-6 lg:pr-32 pb-11 pl-6 lg:pl-8 text-center lg:text-left">
           <h1 className="font-heading text-red-700 text-4xl mb-4">{product.name}</h1>
-          <h2 className="font-body text-black/50 text-base italic mb-12">Eau de Parfum</h2>
+          <h2 className="font-body text-black/50 dark:text-white/50 text-base italic mb-12">Eau de Parfum</h2>
 
           <p className="font-body text-gray-500 text-xl mb-5">Main Accords:</p>
           <p className="font-body text-transform: uppercase; flex flex-wrap mb-5">
@@ -82,10 +82,10 @@ export default function Product({ params }) {
           <div className="flex flex-wrap justify-center lg:justify-start pt-12 gap-2.5">
             {sizes.map((size, index) => (
               <div key={index} className="block">
-                <div className="align-middle text-xl text-center w-fit h-fit rounded-2xl border border-white py-2.5 px-6.5">
+                <div className="align-middle text-xl text-center w-fit h-fit rounded-2xl border border-black dark:border-white py-2.5 px-6.5">
                   {size.size}
                 </div>
-                <p className="font-body text-white/50 mb-5 mt-5 align-stretch text-center">{size.price}</p>
+                <p className="font-body text-black/50 dark:text-white/50 mb-5 mt-5 align-stretch text-center">{size.price}</p>
               </div>
             ))}
           </div>
@@ -101,7 +101,7 @@ export default function Product({ params }) {
             className="object-contain h-14 w-auto mb-4"
           />
           <h3 className="text-2xl mb-3">Luxury Perfume</h3>
-          <p className="text-white text-sm">
+          <p className="text-black dark:text-white text-sm">
             REDISCOVER YOUR SIGNATURE SCENT.<br />
             REUSE & REFILL YOUR BOTTLE.
           </p>
@@ -114,7 +114,7 @@ export default function Product({ params }) {
             className="object-contain h-14 w-auto mb-4"
           />
           <h3 className="text-2xl mb-3">Sustainability</h3>
-          <p className="text-white text-sm">
+          <p className="text-black dark:text-white text-sm">
             REDISCOVER YOUR SIGNATURE SCENT.<br />
             REUSE & REFILL YOUR BOTTLE.
           </p>
@@ -123,7 +123,7 @@ export default function Product({ params }) {
 
       {/* Other Scents */}
       <section className="mx-auto pt-13 pb-26 w-full">
-  <h2 className="text-black text-base mx-4 my-5">Other Scents</h2>
+  <h2 className="text-black dark:text-white text-base mx-4 my-5">Other Scents</h2>
   <div className="overflow-x-auto scrollbar-hide">
     <div className="flex space-x-4 px-4 snap-x snap-mandatory">
     {Object.keys(products)
