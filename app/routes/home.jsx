@@ -6,6 +6,8 @@ import DesktopCategories from "../components/Home/DesktopCategories";
 import { newProducts } from "./discover/products";
 import { bestSellers } from "./discover/products";
 
+import { Link } from 'react-router';
+
 export function meta() {
   return [
     { title: "Acquasuisse" },
@@ -53,7 +55,10 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {newProducts.map((product) => (
+            <Link to={`/product/${product.id}`}>
+
             <ProductCard key={product.id} product={product} />
+            </Link>
           ))}
         </div>
 
@@ -89,7 +94,9 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {bestSellers.map((product) => (
+            <Link to={`/product/${product.id}`}>
             <ProductCard key={product.id} product={product} />
+            </Link>
           ))}
         </div>
         <div class="flex justify-center m-8">
