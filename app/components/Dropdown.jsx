@@ -23,7 +23,7 @@ export default function Dropdown ({ options, handleSelect }) {
         </span>
         <ArrowRightIcon className="h-3 -ms-3 fill-black rotate-90 group-focus:-rotate-90 transition-transform " />
       </div>
-      <div className={`flex flex-col absolute bg-white border-1 border-gray-100 rounded shadow-md ${show ? "" : "hidden"}`}>
+      <div className={`flex flex-col absolute bg-white border-1 border-gray-100 rounded shadow-md z-1 ${show ? "" : "hidden"}`}>
         {options.map((region, i) =>
           <button className="font-body text-base text-start px-2.5 py-1 cursor-pointer hover:bg-gray-100"
             key={i} onClick={() => { setSelect(i); handleSelect(i); }}
