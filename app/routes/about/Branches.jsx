@@ -22,7 +22,6 @@ export default function Branches() {
     searchBar.current.value = "";
     setInputText("");
     setShowClear(false);
-    setClear(false);
   }
 
   const inputHandler = (e) => {
