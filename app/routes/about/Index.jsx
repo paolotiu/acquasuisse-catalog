@@ -13,8 +13,8 @@ export default function Index() {
   return (
     <>
       <AboutUs />
-      <FAQ />
       <Branches />
+      <FAQ />
     </>
   )
 }
