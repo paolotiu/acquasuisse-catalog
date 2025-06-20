@@ -1,5 +1,4 @@
-
-import { useParams, Link} from "react-router-dom";
+import { useParams, Link } from "react-router";
 import { products } from "../data/products";
 
 import Luxury from "/Luxury.png";
@@ -34,8 +33,8 @@ function productCard(similarProduct, index) {
 
 export default function Product() {
   const { productId } = useParams(); // Get productId from URL params
-  const product =  products[parseInt(productId, 10)];  // Dynamically select the product based on the ID
-  
+  const product = products[parseInt(productId, 10)]; // Dynamically select the product based on the ID
+
   const sizes = [
     { size: "10 mL", price: "PHP 129.00" },
     { size: "30 mL", price: "PHP 350.00" },
@@ -56,23 +55,34 @@ export default function Product() {
         <div className="w-full lg:w-5/12 pt-12 pb-16 px-0 lg:px-20 flex flex-col items-center lg:items-start">
           {/* Main PHOTO */}
           <div
-          className="bg-gray-500 w-full h-[27rem] mb-10 sm:rounded-none"
-          style={{ backgroundImage: `url("${product.image}")`, backgroundSize: 'cover' }}
+            className="bg-gray-500 w-full h-[27rem] mb-10 sm:rounded-none"
+            style={{
+              backgroundImage: `url("${product.image}")`,
+              backgroundSize: "cover",
+            }}
           ></div>
-
 
           {/* Thumbnails */}
           <div className="flex justify-between w-full px-0 lg:gap-1">
-            {Array(4).fill(null).map((_, index) => (
-              <div key={index} className="bg-gray-100 w-[5.75rem] h-[3.6875rem]"></div>
-            ))}
+            {Array(4)
+              .fill(null)
+              .map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-100 w-[5.75rem] h-[3.6875rem]"
+                ></div>
+              ))}
           </div>
         </div>
 
         {/* Product Description */}
         <div className="flex flex-col items-center lg:items-start w-full lg:w-7/12 pt-12 lg:pt-32 pr-6 lg:pr-32 pb-11 pl-6 lg:pl-8 text-center lg:text-left">
-          <h1 className="font-heading text-red-700 text-4xl mb-4">{product.name}</h1>
-          <h2 className="font-body text-black/50 text-base italic mb-12">Eau de Parfum</h2>
+          <h1 className="font-heading text-red-700 text-4xl mb-4">
+            {product.name}
+          </h1>
+          <h2 className="font-body text-black/50 text-base italic mb-12">
+            Eau de Parfum
+          </h2>
 
           <p className="font-body text-gray-500 text-xl mb-5">Main Accords:</p>
           <p className="font-body text-transform: uppercase; flex flex-wrap mb-5">
@@ -88,7 +98,9 @@ export default function Product() {
                 <div className="align-middle text-xl text-center w-fit h-fit bg-gray-100 rounded-2xl border-black py-2.5 px-6.5">
                   {size.size}
                 </div>
-                <p className="font-body text-black/50 mb-5 mt-5 align-stretch text-center">{size.price}</p>
+                <p className="font-body text-black/50 mb-5 mt-5 align-stretch text-center">
+                  {size.price}
+                </p>
               </div>
             ))}
           </div>
@@ -105,7 +117,8 @@ export default function Product() {
           />
           <h3 className="text-2xl mb-3">Luxury Perfume</h3>
           <p className="text-black text-sm">
-            REDISCOVER YOUR SIGNATURE SCENT.<br />
+            REDISCOVER YOUR SIGNATURE SCENT.
+            <br />
             REUSE & REFILL YOUR BOTTLE.
           </p>
         </div>
@@ -118,7 +131,8 @@ export default function Product() {
           />
           <h3 className="text-2xl mb-3">Sustainability</h3>
           <p className="text-black text-sm">
-            REDISCOVER YOUR SIGNATURE SCENT.<br />
+            REDISCOVER YOUR SIGNATURE SCENT.
+            <br />
             REUSE & REFILL YOUR BOTTLE.
           </p>
         </div>
@@ -126,23 +140,26 @@ export default function Product() {
 
       {/* Other Scents */}
       <section className="mx-auto pt-13 pb-26 w-full">
-  <h2 className="text-black text-base mx-4 my-5">Other Scents</h2>
-  <div className="overflow-x-auto scrollbar-hide">
-    <div className="flex space-x-4 px-4 snap-x snap-mandatory">
-    {Object.keys(products)
-  .filter((id) => id !== productId)
-  .map((id) => ({ id, ...products[id] }))
-  .sort((a, b) => {
-    const aMatch = a.mainAccords?.includes(product.mainAccords) ? 1 : 0;
-    const bMatch = b.mainAccords?.includes(product.mainAccords) ? 1 : 0;
-    return bMatch - aMatch;
-  })
-  .slice(0, 5)
-  .map(productCard)}
+        <h2 className="text-black text-base mx-4 my-5">Other Scents</h2>
+        <div className="overflow-x-auto scrollbar-hide">
+          <div className="flex space-x-4 px-4 snap-x snap-mandatory">
+            {Object.keys(products)
+              .filter((id) => id !== productId)
+              .map((id) => ({ id, ...products[id] }))
+              .sort((a, b) => {
+                const aMatch = a.mainAccords?.includes(product.mainAccords)
+                  ? 1
+                  : 0;
+                const bMatch = b.mainAccords?.includes(product.mainAccords)
+                  ? 1
+                  : 0;
+                return bMatch - aMatch;
+              })
+              .slice(0, 5)
+              .map(productCard)}
+          </div>
         </div>
-      </div>
-    </section>
-
+      </section>
     </>
   );
 }
