@@ -13,9 +13,9 @@ export default function FAQ() {
   const item = faq_data;
   return (
     <>
-      <div className="bg-white text-center justify-center items-center p-26">
+      <div className="bg-white text-center justify-center items-center p-12 sm:p-26">
         <div className="flex flex-col justify-center w-full">
-          <div className="p-12">
+          <div className="py-12 sm:p-12">
             <h1 className="text-primary font-heading text-5xl">
               Frequently Asked Questions
             </h1>
