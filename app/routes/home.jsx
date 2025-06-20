@@ -3,6 +3,11 @@ import ProductCard from "../components/ProductCard";
 import CategoryCarousel from "../components/Home/CategoryCarousel";
 import DesktopCategories from "../components/Home/DesktopCategories";
 
+import { newProducts } from "./discover/products";
+import { bestSellers } from "./discover/products";
+
+import { Link } from 'react-router';
+
 export function meta() {
   return [
     { title: "Acquasuisse" },
@@ -11,20 +16,6 @@ export function meta() {
 }
 
 export default function Home() {
-  const newInProducts = [
-    { id: 1, name: "Product name", price: "PHP 0.00" }, // should include img, alt properties, for now none because were using divs for placeholder
-    { id: 2, name: "Product name", price: "PHP 0.00" },
-    { id: 3, name: "Product name", price: "PHP 0.00" },
-    { id: 4, name: "Product name", price: "PHP 0.00" },
-  ];
-
-  const bestSellers = [
-    { id: 1, name: "Product name", price: "PHP 0.00" },
-    { id: 2, name: "Product name", price: "PHP 0.00" },
-    { id: 3, name: "Product name", price: "PHP 0.00" },
-    { id: 4, name: "Product name", price: "PHP 0.00" },
-  ];
-
   return (
     <>
       {/* Hero Section */}
@@ -63,8 +54,11 @@ export default function Home() {
           </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-          {newInProducts.map((product) => (
+          {newProducts.map((product) => (
+            <Link to={`/product/${product.id}`}>
+
             <ProductCard key={product.id} product={product} />
+            </Link>
           ))}
         </div>
 
@@ -100,7 +94,9 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {bestSellers.map((product) => (
+            <Link to={`/product/${product.id}`}>
             <ProductCard key={product.id} product={product} />
+            </Link>
           ))}
         </div>
         <div class="flex justify-center m-8">

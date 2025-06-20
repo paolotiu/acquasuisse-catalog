@@ -1,3 +1,7 @@
+import AboutUs from "./AboutUs";
+import FAQ from "./FAQ";
+import Branches from "./Branches";
+
 export function meta() {
   return [
     { title: "Acquasuisse - Index" },
@@ -7,6 +11,10 @@ export function meta() {
 
 export default function Index() {
   return (
-    <h1>Index</h1>
+    <>
+      <AboutUs />
+      <FAQ />
+      <Branches />
+    </>
   )
 }
