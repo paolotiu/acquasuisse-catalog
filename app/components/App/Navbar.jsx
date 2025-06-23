@@ -23,18 +23,6 @@ export default function Navbar({ menu, setOpenBurger, openBurger }) {
     return null;
   };
 
-const menuItems = [
-  {
-    key: 1,
-    heading: "Discover",
-    href: "/discover",
-    sublinks: [
-      { name: "VIEW ALL", href: "/" }, // Add catalog link here
-      { name: "NEW ARRIVALS", href: "/new-arrivals" },
-    ]
-  },
-];
-
   return (
     <>
       <nav className="fixed top-0 w-full z-2">
@@ -59,7 +47,7 @@ const menuItems = [
         </div>
         <div
           className={
-            'lg:top-0 lg:flex lg:flex-row lg:text-white lg:bg-transparent lg:w-fit lg:right-1/2 lg:translate-x-1/2 lg:py-0 lg:gap-9.5 absolute gap-0 py-4 w-full bg-white text-primary flex-col justify-center' +
+            'lg:top-0 lg:flex lg:flex-row lg:text-white lg:bg-transparent lg:dark:bg-transparent dark:bg-gray-900 bg-white lg:w-fit lg:right-1/2 lg:translate-x-1/2 lg:py-0 lg:gap-9.5 absolute gap-0 py-4 w-full dark:text-white text-primary flex-col justify-center' +
             (openBurger ? '' : ' hidden')
           }
         >
@@ -78,7 +66,7 @@ const menuItems = [
                 // onMouseLeave={() => setMenuHover("")}
               >
                 <span>{link.heading}</span>
-                <ArrowRightIcon className="lg:fill-white fill-primary rotate-90 group-hover:-rotate-90 group-focus:-rotate-90 h-3 transition-transform" />
+                <ArrowRightIcon className="lg:fill-white dark:fill-white fill-primary rotate-90 group-hover:-rotate-90 group-focus:-rotate-90 h-3 transition-transform" />
               </a>
               <ul
                 className={
@@ -98,7 +86,7 @@ const menuItems = [
       </nav>
       <nav
         className={
-          'lg:flex dark:bg-gray-950 bg-white justify-center gap-12.5 px-12.5 fixed top-[60px] w-full hidden' +
+          'lg:flex dark:bg-gray-900 bg-white justify-center gap-12.5 px-12.5 fixed top-[60px] w-full hidden z-2' +
           (menuHover || menuFocus ? ' py-2' : '')
         }
         onMouseLeave={() => setMenuHover('')}
@@ -115,7 +103,7 @@ const menuItems = [
       </nav>
       <div
         className={
-          'fixed dark:bg-gray-950 bg-white flex items-center justify-between top-[60px] w-full px-12.5 py-4 gap-4' +
+          'fixed dark:bg-gray-900 bg-white flex items-center justify-between top-[60px] w-full px-12.5 py-4 gap-4' +
           (searchShow ? '' : ' hidden')
         }
       >
