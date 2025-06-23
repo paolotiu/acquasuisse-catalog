@@ -58,10 +58,10 @@ export const bestSellers = [
 export const newProducts = [
   {
     id: 56,
-    name: "bruh idk the new products",
+    name: "New Product Placeholder",
     description: "AMBER, MUSKY, FRESH, SPICY",
     price: "PHP 990.00",
-    image: "/images/products/product7.jpg",
+    image: "/images/PLACEHOLDER.png",
     tags: ["new"],
   },
   {
@@ -69,7 +69,7 @@ export const newProducts = [
     name: "Ocean Bloom",
     description: "AQUATIC, FLORAL, FRESH, CLEAN",
     price: "PHP 1,200.00",
-    image: "/images/products/product8.jpg",
+    image: "/images/PLACEHOLDER.png",
     tags: ["new"],
   },
   

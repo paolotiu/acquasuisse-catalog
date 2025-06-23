@@ -3,7 +3,6 @@ import { index, layout, route } from "@react-router/dev/routes";
 export default [
     layout("layouts/main.jsx", [
         index("routes/Home.jsx"),
-        route("catalogue", "routes/Catalogue.jsx"),
         route("product/:productId", "routes/product.jsx"),
         route("about", "routes/about/About.jsx", [
             index("routes/about/Index.jsx"),
@@ -12,7 +11,6 @@ export default [
             route("faq", "routes/about/FAQ.jsx"),
         ]),
         route("discover", "routes/discover/Discover.jsx", [
-            index("routes/discover/Discover-Index.jsx"),
             route("new-in", "routes/discover/new_in.jsx"),
             route("bestsellers", "routes/discover/bestsellers.jsx"),
             route("view-all", "routes/discover/view_all.jsx"),
